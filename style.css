@@ -1,10 +1,10 @@
 .noprint {
   width: 80%;
   margin: 0 10% 0 10%;
-  padding: 10%;
+  padding: auto;
   background: #9b4dca;
   color: #fff;
-  border-radius: 5%;
+  border-radius: 100vw;
   text-decoration: none;
   line-height: 1;
   font-size: large;
