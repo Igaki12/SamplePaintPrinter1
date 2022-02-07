@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+      @media print{
+        .noprint {
+          display: none;
+        }
+        .header {
+          font-size:40px;
+          text-align:center;
+        }
+        table {
+          border-collapse: collapse;
+          width:100%;
+        }
+        td,th {
+          border: 2px #000000 solid;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="印刷" class="noprint" onclick="window.print();"/>
+    <div class="header">
+      ユーザーマスタ一覧
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+          <th>ふりがな</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>煌木 太郎</td>
+          <td>きらめき たろう</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>佐藤 花子</td>
+          <td>さとう はなこ</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>鈴木 一郎</td>
+          <td>すずき いちろう</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
