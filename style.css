@@ -10,3 +10,43 @@
   font-size: 15vw;
   border: none;
 }
+#operating-screen {
+  width: 100vw;
+  height: 71vw;
+  background-color: yellow;
+}
+#background_white {
+  margin: 0;
+  width: 100vw;
+  height: 71vw;
+  border: none;
+  background-image: url('background_white.png');
+  background-position: center;
+}
+.drag-and-drop {
+  cursor: move;
+  position: absolute;
+  z-index: 1000;
+}
+
+.drag {
+  z-index: 1001;
+}
+@media print {
+  .noprint {
+    display: none;
+  }
+  .header {
+    font-size: 40px;
+    text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td,
+  th {
+    border: 2px #000000 solid;
+    padding: 20px;
+  }
+}

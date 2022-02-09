@@ -6,27 +6,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <style type="text/css">
-      @media print{
-        .noprint {
-          display: none;
-        }
-        .header {
-          font-size:40px;
-          text-align:center;
-        }
-        table {
-          border-collapse: collapse;
-          width:100%;
-        }
-        td,th {
-          border: 2px #000000 solid;
-          padding: 20px;
-        }
-      }
+
     </style>
   </head>
   <body>
     <input type="button" value="印刷" class="noprint" onclick="window.print();"/>
+    <div id="operating-screen">
+      <div id="background_white"></div>
+      <div class="drag-and-drop" id="red-box"></div>
+      <div class="drag-and-drop" id="blue-box"></div>
+      <div class="drag-and-drop" id="yellow-box"></div>
+    </div>
+    
     <div class="header">
       ユーザーマスタ一覧
     </div>
@@ -56,5 +47,6 @@
         </tr>
       </tbody>
     </table>
+    <script type="module" src="sample.js"></script>
   </body>
 </html>
