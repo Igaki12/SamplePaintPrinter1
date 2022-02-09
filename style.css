@@ -11,21 +11,21 @@
   border: none;
 }
 #operating-screen {
-  width: 100vw;
+  width: 98vw;
   height: 100vw;
   background-color: yellow;
 }
 #background_white {
   margin: 0;
-  width: 100vw;
-  height: 71vw;
+  width: 98vw;
+  height: 70vw;
   border: none;
   background-image: url('background_white.png');
   background-position: center;
 }
 .drag-and-drop {
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 100px;
   cursor: move;
   position: absolute;
   z-index: 1000;
