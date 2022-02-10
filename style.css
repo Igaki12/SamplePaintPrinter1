@@ -24,7 +24,7 @@
   background-image: url('background_white.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 175%;
+  background-size: 100%;
 }
 .drag-and-drop {
   width: 100px;
