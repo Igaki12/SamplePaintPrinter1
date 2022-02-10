@@ -79,8 +79,14 @@
 
 })()
 const body = document.getElementById('operating-screen');
+const redBody = document.getElementById('redBody');
+const greenBody = document.getElementById('greenBody');
+const blueBody = document.getElementById('blueBody');
 console.log(body);
 function changeBodyColor(color){
-    alert('started changeBodyColor method.')
+    alert('started changeBodyColor method.');
     body.style.backgroundColor = color;
 }
+redBody.addEventListener('click',changeBodyColor('FF0000'));
+greenBody.addEventListener('click',changeBodyColor('00FF00'));
+blueBody.addEventListener('click',changeBodyColor('0000FF'));
