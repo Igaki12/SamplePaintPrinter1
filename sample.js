@@ -79,7 +79,9 @@
 
 })()
 const body = document.getElementById('operating-screen');
+const red
 console.log(body);
 function changeBodyColor(color){
+    alert('started changeBodyColor method.')
     body.style.backgroundColor = color;
 }
