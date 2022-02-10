@@ -83,10 +83,13 @@ const redBody = document.getElementById('redBody');
 const greenBody = document.getElementById('greenBody');
 const blueBody = document.getElementById('blueBody');
 console.log(body);
+console.log(redBody);
 function changeBodyColor(color){
-    alert('started changeBodyColor method.');
+    console.log('started changeBodyColor method.');
     body.style.backgroundColor = color;
 }
 redBody.addEventListener('click',changeBodyColor('FF0000'));
+redBody.addEventListener('mousedown',changeBodyColor('FF0000'));
+redBody.addEventListener('touchstart',changeBodyColor('FF0000'));
 greenBody.addEventListener('click',changeBodyColor('00FF00'));
 blueBody.addEventListener('click',changeBodyColor('0000FF'));
