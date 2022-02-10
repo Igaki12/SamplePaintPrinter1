@@ -9,8 +9,8 @@
 
   //マウスが要素内で押されたとき、又はタッチされたとき発火
   for(var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener("mousedown", mDown, false);
-      elements[i].addEventListener("touchstart", mDown, false);
+      elements[i].addEventListener("mousedown", mDown, {passive:false});
+      elements[i].addEventListener("touchstart", mDown, {passive:false});
   }
 
   //マウスが押された際の関数
@@ -31,8 +31,8 @@
       y = event.pageY - this.offsetTop;
 
       //ムーブイベントにコールバック
-      document.body.addEventListener("mousemove", mMove, false);
-      document.body.addEventListener("touchmove", mMove, false);
+      document.body.addEventListener("mousemove", mMove, {passive:false});
+      document.body.addEventListener("touchmove", mMove, {passive:false});
   }
 
   //マウスカーソルが動いたときに発火
@@ -56,10 +56,10 @@
       drag.style.left = event.pageX - x + "px";
 
       //マウスボタンが離されたとき、またはカーソルが外れたとき発火
-      drag.addEventListener("mouseup", mUp, false);
-      document.body.addEventListener("mouseleave", mUp, false);
-      drag.addEventListener("touchend", mUp, false);
-      document.body.addEventListener("touchleave", mUp, false);
+      drag.addEventListener("mouseup", mUp, {passive:false});
+      document.body.addEventListener("mouseleave", mUp, {passive:false});
+      drag.addEventListener("touchend", mUp, {passive:false});
+      document.body.addEventListener("touchleave", mUp, {passive:false});
 
   }
 
@@ -68,10 +68,10 @@
       var drag = document.getElementsByClassName("drag")[0];
 
       //ムーブベントハンドラの消去
-      document.body.removeEventListener("mousemove", mMove, false);
-      drag.removeEventListener("mouseup", mUp, false);
-      document.body.removeEventListener("touchmove", mMove, false);
-      drag.removeEventListener("touchend", mUp, false);
+      document.body.removeEventListener("mousemove", mMove, {passive:false});
+      drag.removeEventListener("mouseup", mUp, {passive:false});
+      document.body.removeEventListener("touchmove", mMove, {passive:false});
+      drag.removeEventListener("touchend", mUp, {passive:false});
 
       //クラス名 .drag も消す
       drag.classList.remove("drag");
@@ -88,8 +88,8 @@ function changeBodyColor(color){
     console.log('started the method of changeBodyColor');
     body.style.backgroundColor = color;
 }
-redBody.addEventListener('click',changeBodyColor('FF0000'),false);
-redBody.addEventListener('mousedown',changeBodyColor('FF0000'),false);
-redBody.addEventListener('touchstart',changeBodyColor('FF0000'),false);
-greenBody.addEventListener('click',changeBodyColor('00FF00'),false);
-blueBody.addEventListener('click',changeBodyColor('0000FF'),false);
+redBody.addEventListener('click',changeBodyColor('FF0000'),{passive:false});
+redBody.addEventListener('mousedown',changeBodyColor('FF0000'),{passive:false});
+redBody.addEventListener('touchstart',changeBodyColor('FF0000'),{passive:false});
+greenBody.addEventListener('click',changeBodyColor('00FF00'),{passive:false});
+blueBody.addEventListener('click',changeBodyColor('0000FF'),{passive:false});
