@@ -84,9 +84,9 @@ const greenBody = document.getElementById('greenBody');
 const blueBody = document.getElementById('blueBody');
 console.log(body);
 console.log(redBody);
-function changeBodyColor(){
-    console.log('started changeBodyColor method.');
-    body.style.backgroundColor = 'red';
+function changeBodyColor(color){
+    console.log('started the method of changeBodyColor');
+    body.style.backgroundColor = color;
 }
 redBody.addEventListener('click',changeBodyColor('FF0000'));
 redBody.addEventListener('mousedown',changeBodyColor('FF0000'));
