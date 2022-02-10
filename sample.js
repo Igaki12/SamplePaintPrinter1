@@ -88,8 +88,8 @@ function changeBodyColor(color){
     console.log('started the method of changeBodyColor');
     body.style.backgroundColor = color;
 }
-redBody.addEventListener('click',changeBodyColor('FF0000'),{passive:false});
-redBody.addEventListener('mousedown',changeBodyColor('FF0000'),{passive:false});
-redBody.addEventListener('touchstart',changeBodyColor('FF0000'),{passive:false});
-greenBody.addEventListener('click',changeBodyColor('00FF00'),{passive:false});
-blueBody.addEventListener('click',changeBodyColor('0000FF'),{passive:false});
+redBody.addEventListener('click',changeBodyColor('#FF0000'),{passive:false});
+redBody.addEventListener('mousedown',changeBodyColor('#FF0000'),{passive:false});
+redBody.addEventListener('touchstart',changeBodyColor('#FF0000'),{passive:false});
+greenBody.addEventListener('click',changeBodyColor('#00FF00'),{passive:false});
+blueBody.addEventListener('click',changeBodyColor('#0000FF'),{passive:false});
