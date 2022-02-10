@@ -82,10 +82,9 @@ const body = document.getElementById('operating-screen');
 const redBody = document.getElementById('redBody');
 const greenBody = document.getElementById('greenBody');
 const blueBody = document.getElementById('blueBody');
-console.log(body);
-console.log(redBody);
+console.log(`body:${body}`);
+console.log(`redBody:${redBody}`);
 function changeBodyColor(color){
-    console.log('started the method of changeBodyColor');
     body.style.backgroundColor = color;
 }
 redBody.addEventListener('click',() => {changeBodyColor('#FF0000')},{passive:false});
