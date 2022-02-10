@@ -78,3 +78,8 @@
   }
 
 })()
+const body = document.getElementById('operating-screen');
+console.log(body);
+function changeBodyColor(color){
+    body.style.backgroundColor = color;
+}
