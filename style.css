@@ -1,4 +1,4 @@
-.noprint {
+.printButton {
   width: 80%;
   margin: 2vh 10% 2vh 10%;
   padding: 5vw;
@@ -22,6 +22,8 @@
   border: none;
   background-image: url('background_white.png');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
 }
 .drag-and-drop {
   width: 100px;
@@ -43,10 +45,26 @@
 .drag {
   z-index: 1001;
 }
+#bodyColor_config {
+  display: flex;
+}
+.bodyColor {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid grey;
+}
+#redBody {
+  background: #ff0000;
+}
+#greenBody {
+  background: #00ff00;
+}
+#blueBody {
+  background: #0000ff;
+}
 @media print {
-  .drag-and-drop {
-    display: block;
-  }
   .noprint {
     display: none;
   }
