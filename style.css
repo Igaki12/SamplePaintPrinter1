@@ -82,4 +82,7 @@
     border: 2px #000000 solid;
     padding: 20px;
   }
+  @page {
+    margin: 0;
+  }
 }
