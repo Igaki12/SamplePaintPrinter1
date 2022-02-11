@@ -11,6 +11,7 @@
   border: none;
 }
 #operating-screen {
+  margin-left: 0;
   width: 98vw;
   height: 120vw;
   background-color: yellow;
