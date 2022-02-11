@@ -69,8 +69,11 @@
   .noprint {
     display: none;
   }
-  .drag-and-drop {
-    position: fixed;
+  .operating-screen {
+    position: absolute;
+  }
+  #background_White {
+    position: absolute;
   }
   .header {
     font-size: 40px;
