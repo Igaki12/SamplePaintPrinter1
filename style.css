@@ -97,6 +97,6 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 20mm;
-    margin-right: 190mm - 100vw;
+    width: 100vw;
   }
 }
