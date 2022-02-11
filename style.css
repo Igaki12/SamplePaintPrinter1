@@ -27,8 +27,8 @@
   background-size: 175%;
 }
 .drag-and-drop {
-  width: 40vw;
-  height: 40vw;
+  width: 20vw;
+  height: 20vw;
   cursor: move;
   position: absolute;
   z-index: 1000;
