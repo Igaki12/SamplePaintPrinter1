@@ -68,7 +68,7 @@
 }
 @media print {
   .noprint {
-    opacity: 1;
+    background: white;
   }
   .header {
     font-size: 40px;
