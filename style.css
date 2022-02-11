@@ -30,6 +30,7 @@
   width: 20vw;
   height: 20vw;
   cursor: move;
+  position: absolute;
   z-index: 1000;
 }
 #red-box {
