@@ -52,8 +52,8 @@
       e.preventDefault();
 
       //マウスが動いた場所に要素を動かす
-      drag.style.top = event.pageY - y + "vw";
-      drag.style.left = event.pageX - x + "vw";
+      drag.style.top = event.pageY - y + "px";
+      drag.style.left = event.pageX - x + "px";
 
       //マウスボタンが離されたとき、またはカーソルが外れたとき発火
       drag.addEventListener("mouseup", mUp, {passive:false});
