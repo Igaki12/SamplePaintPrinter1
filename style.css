@@ -96,7 +96,7 @@ body {
   @page {
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 23mm;
-    margin-right: 83mm;
+    margin-left: 20mm;
+    margin-right: 190mm - 100vw;
   }
 }
