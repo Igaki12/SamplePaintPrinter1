@@ -24,11 +24,11 @@
   background-image: url('background_white.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 175%;
 }
 .drag-and-drop {
-  width: 100px;
-  height: 100px;
+  width: 40vw;
+  height: 40vw;
   cursor: move;
   position: absolute;
   z-index: 1000;
