@@ -73,7 +73,9 @@ body {
   .noprint {
     background: white;
   }
-  .drag-and-drop{
+  #redBody,
+  #greenBody,
+  #blueBody {
     background: white;
     border: none;
   }
