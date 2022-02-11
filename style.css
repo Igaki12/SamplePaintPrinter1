@@ -68,13 +68,7 @@
 }
 @media print {
   .noprint {
-    display: none;
-  }
-  .operating-screen {
-    position: absolute;
-  }
-  #background_White {
-    position: absolute;
+    opacity: 1;
   }
   .header {
     font-size: 40px;
