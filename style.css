@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 .printButton {
   width: 80%;
   margin: 2vh 10% 2vh 10%;
