@@ -15,14 +15,14 @@ body {
 }
 #operating-screen {
   margin-left: 0;
-  width: 98vw;
+  width: 100vw;
   height: 120vw;
   background-color: yellow;
 }
 #background_white {
   margin: 0;
   padding: 0;
-  width: 98vw;
+  width: 100vw;
   height: 70vw;
   border: none;
   background-image: url('background_white.png');
