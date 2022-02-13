@@ -150,25 +150,25 @@ submit.addEventListener('click',() => {
         cans[i].addEventListener("mousedown",mDown, {passive:false});
         cans[i].addEventListener("touchstart",mDown, {passive:false});
     }
-    let writeNewCanvas = (id,font) => {
+    let writeNewCanvas = (id,font,size) => {
         ctx = cans[id].getContext("2d");
         ctx.lineWidth = 5;
         ctx.fillStyle = "#0ff";
-        ctx.font = "50px cursive";
+        ctx.font = size + "px cursive";
         cans[id].width = Math.ceil(ctx.measureText(font).width) + 30;
         ctx.lineWidth = 5;
         ctx.fillStyle = "#0ff";
-        ctx.font = "50px cursive";
-        ctx.fillText(font, 15, 65);
+        ctx.font = size + "px cursive";
+        ctx.fillText(font, 15, size + 15);
         ctx.lineWidth = 7;
         ctx.strokeStyle = "green";
-        ctx.strokeText(font, 15, 65);
+        ctx.strokeText(font, 15, size + 15);
         ctx.lineWidth = 4;
         ctx.strokeStyle = "orange";
-        ctx.strokeText(font, 15, 65);
+        ctx.strokeText(font, 15, size + 15);
         ctx.lineWidth = 2;
         ctx.strokeStyle = "yellow";
-        ctx.strokeText(font, 15, 65);
+        ctx.strokeText(font, 15, size + 15);
         console.log(Math.ceil(ctx.measureText(font).width) + 10);
         cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
         text.value = '';
