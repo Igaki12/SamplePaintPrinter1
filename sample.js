@@ -135,14 +135,25 @@ cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 30 + "p
 const submit = document.getElementById('create_text');
 const text = document.getElementById('text');
 const ope = document.getElementById('operating-screen');
+const range = document.getElementById('fontSize');
+const sizeView = document.getElementById('fontSize_value');
+const setCurrentSize = (value) => {
+    sizeView.innerText = value;
+}
+const rangeOnChange = (e) => {
+    setCurrentSize(e.target.value);
+}
+range.addEventListener('input',rangeOnChange);
 let fontId = 1;
 submit.addEventListener('click',() => {
     let inputEl = text.value;
+    let inputSize = range.value;
     if(inputEl === "") return;
-    console.log(inputEl);
+    console.log(`${inputEl},${inputSize}`);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
-    newFont.height = 70;
+    newFont.height = inputSize + 20;
+    newFont.style.height = inputSize + 20;
     ope.appendChild(newFont);
     console.log(newFont);
     cans = document.getElementsByClassName('character');
@@ -173,7 +184,7 @@ submit.addEventListener('click',() => {
         cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
         text.value = '';
         }
-    writeNewCanvas(fontId,inputEl);
+    writeNewCanvas(fontId,inputEl,inputSize);
     console.log(cans);
     fontId++;
 
