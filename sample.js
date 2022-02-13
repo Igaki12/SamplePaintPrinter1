@@ -124,3 +124,12 @@ ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
 console.log(ctx.measureText("Hello World!"));
 cans[0].style.width = ctx.measureText("Hello World!").width;
+
+// 入力した文字列からフォントを作成する
+const submit = document.getElementById('create_text');
+const text = document.getElementById('text');
+submit.addEventListener('click',() => {
+    let inputEl = text.value;
+    console.log(inputEl);
+},{passive:false})
+
