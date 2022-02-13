@@ -1,3 +1,4 @@
+  
   //要素の取得
   var elements = document.getElementsByClassName("drag-and-drop");
   let cans = document.getElementsByClassName("character");
@@ -130,6 +131,7 @@ cans[0].style.width = ctx.measureText("Hello World!").width;
 const submit = document.getElementById('create_text');
 const text = document.getElementById('text');
 const ope = document.getElementById('operating-screen');
+let fontId = 1;
 submit.addEventListener('click',() => {
     let inputEl = text.value;
     if(inputEl === "") return;
@@ -138,9 +140,14 @@ submit.addEventListener('click',() => {
     newFont.className = 'character';
     ope.appendChild(newFont);
     console.log(newFont);
+    fontId++;
     cans = document.getElementsByClassName('character');
-    let writeNewCanvas = (font) => {
-        ctx = cans[1].getContext("2d");
+    for(let i = 0; i<cans.length; i++){
+        cans[i].addEventListener("mousedown",mDown, {passive:false});
+        cans[i].addEventListener("touchstart",mDown, {passive:false});
+    }
+    let writeNewCanvas = (id,font) => {
+        ctx = cans[id].getContext("2d");
         ctx.lineWidth = 5;
         ctx.fillStyle = "#0ff";
         ctx.font = "50px cursive";
@@ -155,9 +162,9 @@ submit.addEventListener('click',() => {
         ctx.strokeStyle = "yellow";
         ctx.strokeText(font, 15, 65);
         console.log(ctx.measureText(font));
-        cans[1].style.width = ctx.measureText(font).width;
+        cans[id].style.width = ctx.measureText(font).width;
         }
-    writeNewCanvas(inputEl);
+    writeNewCanvas(fontId,inputEl);
     console.log(cans);
 
 },{passive:false})
