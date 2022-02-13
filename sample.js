@@ -117,7 +117,7 @@ console.log(ctx.measureText("Hello World!"));
 cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 30;
 ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
-ctx.font = "50px cursive";
+ctx.font = "bold 50px fantasy";
 ctx.fillText("Hello World!!", 15, 50);
 ctx.lineWidth = 7;
 ctx.strokeStyle = "green";
@@ -171,7 +171,7 @@ submit.addEventListener('click',() => {
         cans[id].width = Math.ceil(ctx.measureText(font).width) + 30;
         ctx.lineWidth = 5;
         ctx.fillStyle = color;
-        ctx.font = size + "px cursive";
+        ctx.font = `bold ${size}px fantasy`;
         ctx.fillText(font, 15, size);
         ctx.lineWidth = 7;
         ctx.strokeStyle = "green";
