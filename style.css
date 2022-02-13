@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 .printButton {
-  min-width: 200px;
+  min-width: 100%;
   margin: 10px 50px 10px 50px;
   padding: 20px;
   background: #9b4dca;
@@ -40,7 +40,7 @@ body {
   z-index: 1000;
 }
 .character {
-  width: 100px;
+  width: auto;
   height: 100px;
   cursor: move;
   position: absolute;

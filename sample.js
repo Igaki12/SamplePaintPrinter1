@@ -113,3 +113,7 @@ ctx.lineWidth = 2;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
 ctx.fillText("Hello World!!", 15, 65);
+ctx.strokeStyle = "green";
+ctx.strokeText("Hello World!!", 15, 65);
+ctx.strokeStyle = "yellow";
+ctx.strokeText("Hello World!!", 15, 65);
