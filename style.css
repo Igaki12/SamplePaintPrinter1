@@ -40,7 +40,7 @@ body {
   z-index: 1000;
 }
 .character {
-  height: 60px;
+  height: 70px;
   cursor: move;
   position: absolute;
   z-index: 1000;
