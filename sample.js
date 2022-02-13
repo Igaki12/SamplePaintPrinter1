@@ -123,7 +123,7 @@ ctx.strokeText("Hello World!!", 15, 65);
 ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
-console.log(Math.ceil(ctx.measureText("Hello World!").width) + 1);
+console.log(ctx.measureText("Hello World!"));
 cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 1 + "px";
 
 
