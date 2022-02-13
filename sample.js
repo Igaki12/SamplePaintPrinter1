@@ -1,7 +1,6 @@
-
   //要素の取得
   var elements = document.getElementsByClassName("drag-and-drop");
-  var cans = document.getElementsByClassName("character");
+  let cans = document.getElementsByClassName("character");
   console.log(cans);
 
 
@@ -93,6 +92,7 @@
       drag.classList.remove("drag");
   }
 
+
 const body = document.getElementById('operating-screen');
 const redBody = document.getElementById('redBody');
 const greenBody = document.getElementById('greenBody');
@@ -108,7 +108,7 @@ blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:fa
 
 
 // ここから文字の作成・移動
-var ctx = cans[0].getContext("2d");
+let ctx = cans[0].getContext("2d");
 ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
@@ -125,6 +125,7 @@ ctx.strokeText("Hello World!!", 15, 65);
 console.log(ctx.measureText("Hello World!"));
 cans[0].style.width = ctx.measureText("Hello World!").width;
 
+
 // 入力した文字列からフォントを作成する
 const submit = document.getElementById('create_text');
 const text = document.getElementById('text');
@@ -133,8 +134,30 @@ submit.addEventListener('click',() => {
     let inputEl = text.value;
     if(inputEl === "") return;
     console.log(inputEl);
-    console.log(ope.lastElementChild);
     let newFont = ope.lastElementChild.cloneNode(true);
-    addChild(newFont);
+    ope.appendChild(newFont);
+    console.log(newFont);
+    cans = document.getElementsByClassName('character');
+    let writeNewCanvas = (font) => {
+        ctx = cans[1].getContext("2d");
+        ctx.lineWidth = 5;
+        ctx.fillStyle = "#0ff";
+        ctx.font = "50px cursive";
+        ctx.fillText(font, 15, 65);
+        ctx.lineWidth = 7;
+        ctx.strokeStyle = "green";
+        ctx.strokeText(font, 15, 65);
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = "orange";
+        ctx.strokeText(font, 15, 65);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "yellow";
+        ctx.strokeText(font, 15, 65);
+        console.log(ctx.measureText(font));
+        cans[1].style.width = ctx.measureText(font).width;
+        }
+    writeNewCanvas(inputEl);
+    console.log('All tasks were finished');
+
 },{passive:false})
 
