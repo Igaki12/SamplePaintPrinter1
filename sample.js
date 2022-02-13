@@ -2,9 +2,8 @@
 
   //要素の取得
   var elements = document.getElementsByClassName("drag-and-drop");
-  var can1 = document.getElementById("character1");
-  console.log(can1);
-  elements.push(can1);
+  var cans = document.getElementsByClassName("character");
+  console.log(cans);
 
 
   //要素内のクリックされた位置を取得するグローバル（のような）変数
@@ -15,6 +14,10 @@
   for(var i = 0; i < elements.length; i++) {
       elements[i].addEventListener("mousedown", mDown, {passive:false});
       elements[i].addEventListener("touchstart", mDown, {passive:false});
+  }
+  for(var i = 0; i<cans.length; i++){
+      cans[i].addEventListener("mousedown",mDown, {passive:false});
+      cans[i].addEventListener("touchstart",mDown, {passive:false});
   }
 
   //マウスが押された際の関数
@@ -105,10 +108,10 @@ redBody.addEventListener('click',() => {changeBodyColor('#FF0000')},{passive:fal
 greenBody.addEventListener('click',() => {changeBodyColor('#00FF00')},{passive:false});
 blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:false});
 
-window.onload = () => {
-    var ctx = can.getContext("2d");
-    ctx.lineWidth = 2;
-    ctx.fillStyle = "#0ff";
-    ctx.font = "50px cursive";
-    ctx.fillText("Hello World!!", 15, 65);
-  }
+
+// ここから文字の作成・移動
+var ctx = can.getContext("2d");
+ctx.lineWidth = 2;
+ctx.fillStyle = "#0ff";
+ctx.font = "50px cursive";
+ctx.fillText("Hello World!!", 15, 65);
