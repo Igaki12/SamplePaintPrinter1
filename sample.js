@@ -154,7 +154,7 @@ submit.addEventListener('click',() => {
     console.log(`${inputEl},${inputSize}`);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
-    newFont.height = inputSize + 20;
+    newFont.height = `${inputSize + 20}`;
     newFont.style.height = `${inputSize + 20}px`;
     ope.appendChild(newFont);
     console.log(newFont);
