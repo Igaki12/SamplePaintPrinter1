@@ -134,7 +134,8 @@ submit.addEventListener('click',() => {
     let inputEl = text.value;
     if(inputEl === "") return;
     console.log(inputEl);
-    let newFont = ope.lastElementChild.cloneNode(true);
+    let newFont = document.createElement('canvas');
+    newFont.className = 'character';
     ope.appendChild(newFont);
     console.log(newFont);
     cans = document.getElementsByClassName('character');
@@ -157,7 +158,7 @@ submit.addEventListener('click',() => {
         cans[1].style.width = ctx.measureText(font).width;
         }
     writeNewCanvas(inputEl);
-    console.log('All tasks were finished');
+    console.log(cans);
 
 },{passive:false})
 
