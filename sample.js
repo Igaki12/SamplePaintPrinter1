@@ -134,6 +134,7 @@ submit.addEventListener('click',() => {
     if(inputEl === "") return;
     console.log(inputEl);
     console.log(ope.lastElementChild);
-    ope.lastElementChild.cloneNode(true);
+    let newFont = ope.lastElementChild.cloneNode(true);
+    addChild(newFont);
 },{passive:false})
 
