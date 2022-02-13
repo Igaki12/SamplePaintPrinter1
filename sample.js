@@ -137,13 +137,12 @@ const text = document.getElementById('text');
 const ope = document.getElementById('operating-screen');
 const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize_value');
-function setCurrentSize(value) {
-    sizeView.innerText = value;
-}
-(function rangeOnChange(e) {
+range.addEventListener('input',(e) => {
+    const setCurrentSize = (value) => {
+        sizeView.innerText = value;
+    }
     setCurrentSize(e.target.value);
-})({passive:false})
-range.addEventListener('input',rangeOnChange);
+},{passive:false});
 let fontId = 1;
 submit.addEventListener('click',() => {
     let inputEl = text.value;
