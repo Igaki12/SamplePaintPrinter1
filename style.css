@@ -37,6 +37,13 @@ body {
   position: absolute;
   z-index: 1000;
 }
+.character {
+  width: 100px;
+  height: 100px;
+  cursor: move;
+  position: absolute;
+  z-index: 1000;
+}
 #red-box {
   background-color: red;
 }
