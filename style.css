@@ -41,7 +41,7 @@ body {
 }
 .character {
   width: auto;
-  height: auto;
+  height: 50px;
   cursor: move;
   position: absolute;
   z-index: 1000;
