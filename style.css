@@ -14,9 +14,9 @@ body {
   border: none;
 }
 #operating-screen {
-  margin-left: 0;
+  margin: 0 auto;
   width: 390px;
-  height: auto;
+  height: 390px;
   background-color: yellow;
 }
 #background_white {
