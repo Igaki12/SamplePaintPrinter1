@@ -58,11 +58,11 @@
       e.preventDefault();
 
           //   個人的な追記部分(画面外まで動いて行ってしまわないようにする)
-    if(event.pageY > 480){
-        event.pageY = 480;
+    if(event.pageY - y > 480){
+        event.pageY = 480 + y;
     }
-    if(event.pageX > 480){
-        event.pageX = 480;
+    if(event.pageX - x > 480){
+        event.pageX = 480 + x;
     }
 
       //マウスが動いた場所に要素を動かす
