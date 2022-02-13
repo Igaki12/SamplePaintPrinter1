@@ -125,8 +125,8 @@ ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
 console.log(ctx.measureText("Hello World!"));
 console.log(cans[0].width);
-cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 10 + "px";
 cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 10;
+cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 10 + "px";
 // cans[0].width = cans[0].clientWidth;
 // cans[0].height = cans[0].clientHeight;
 
