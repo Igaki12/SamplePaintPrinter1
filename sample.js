@@ -113,6 +113,7 @@ let ctx = cans[0].getContext("2d");
 ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
+cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 10;
 ctx.fillText("Hello World!!", 15, 65);
 ctx.lineWidth = 7;
 ctx.strokeStyle = "green";
@@ -126,7 +127,7 @@ ctx.strokeText("Hello World!!", 15, 65);
 console.log(ctx.measureText("Hello World!"));
 console.log(cans[0].width);
 cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 10;
-// cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 10 + "px";
+cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 10 + "px";
 // cans[0].width = cans[0].clientWidth;
 // cans[0].height = cans[0].clientHeight;
 
