@@ -138,7 +138,6 @@ const ope = document.getElementById('operating-screen');
 const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize-value');
 let inputSize = range.value;
-console.log(inputSize);
 sizeView.innerText = inputSize;
 range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
@@ -156,7 +155,7 @@ submit.addEventListener('click',() => {
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
     newFont.height = inputSize + 20;
-    newFont.style.height = inputSize + 20;
+    newFont.style.height = `${inputSize + 20}px`;
     ope.appendChild(newFont);
     console.log(newFont);
     cans = document.getElementsByClassName('character');
