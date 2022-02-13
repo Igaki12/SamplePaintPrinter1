@@ -133,7 +133,7 @@ submit.addEventListener('click',() => {
     let inputEl = text.value;
     if(inputEl === "") return;
     console.log(inputEl);
-    ope.lastElementChild.cloneNode(true);
     console.log(ope.lastElementChild);
+    ope.lastElementChild.cloneNode(true);
 },{passive:false})
 
