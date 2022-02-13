@@ -138,6 +138,7 @@ const ope = document.getElementById('operating-screen');
 const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize_value');
 let inputSize = range.value;
+console.log(inputSize);
 sizeView.innerText = inputSize;
 range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
