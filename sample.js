@@ -153,7 +153,7 @@ submit.addEventListener('click',() => {
     console.log(`${inputEl},${inputSize}`);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
-    let h = inputSize + 20;
+    let h = parseInt(inputSize) + 20;
     console.log("h:" + h);
     newFont.height = h;
     newFont.style.height = h;
