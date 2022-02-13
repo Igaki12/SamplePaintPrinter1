@@ -103,6 +103,7 @@ body {
     padding: 20px;
   }
   @page {
-    margin: 0;
+    /* 印刷時のページの余白を指定できるs */
+    /* margin: 0; */
   }
 }
