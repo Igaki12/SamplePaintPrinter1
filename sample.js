@@ -143,6 +143,7 @@ range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
         sizeView.innerText = value;
     }
+    console.log(e.target.value);
     setCurrentSize(e.target.value);
 },{passive:false});
 let fontId = 1;
