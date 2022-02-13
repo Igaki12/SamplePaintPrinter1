@@ -124,9 +124,9 @@ ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
 console.log(ctx.measureText("Hello World!"));
-cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 10 + "px";
-cans[0].width = cans[0].clientWidth;
-cans[0].height = cans[0].clientHeight;
+// cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 10 + "px";
+// cans[0].width = cans[0].clientWidth;
+// cans[0].height = cans[0].clientHeight;
 
 
 // 入力した文字列からフォントを作成する
@@ -140,6 +140,7 @@ submit.addEventListener('click',() => {
     console.log(inputEl);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
+    newFont.height = '70';
     ope.appendChild(newFont);
     console.log(newFont);
     cans = document.getElementsByClassName('character');
@@ -163,9 +164,9 @@ submit.addEventListener('click',() => {
         ctx.strokeStyle = "yellow";
         ctx.strokeText(font, 15, 65);
         console.log(Math.ceil(ctx.measureText(font).width) + 10);
-        cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 10 + "px";
-        cans[id].width = cans[id].clientWidth;
-        cans[id].height = cans[id].clientHeight;
+        // cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 10 + "px";
+        // cans[id].width = cans[id].clientWidth;
+        // cans[id].height = cans[id].clientHeight;
         }
     writeNewCanvas(fontId,inputEl);
     console.log(cans);
