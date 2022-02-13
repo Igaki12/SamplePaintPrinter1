@@ -154,7 +154,6 @@ submit.addEventListener('click',() => {
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
     let h = parseInt(inputSize) + 20;
-    console.log("h:" + h);
     newFont.height = h;
     newFont.style.height = h;
     ope.appendChild(newFont);
@@ -187,7 +186,7 @@ submit.addEventListener('click',() => {
         cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
         text.value = '';
         }
-    writeNewCanvas(fontId,inputEl,inputSize);
+    writeNewCanvas(fontId,inputEl,parseInt(inputSize));
     console.log(cans);
     fontId++;
 
