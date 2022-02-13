@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 .printButton {
-  width: auto;
+  min-width: 200px;
   margin: 10px 50px 10px 50px;
   padding: 20px;
   background: #9b4dca;
