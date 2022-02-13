@@ -100,3 +100,12 @@ function changeBodyColor(color){
 redBody.addEventListener('click',() => {changeBodyColor('#FF0000')},{passive:false});
 greenBody.addEventListener('click',() => {changeBodyColor('#00FF00')},{passive:false});
 blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:false});
+
+window.onload = () => {
+    var can = document.getElementById("canvas");
+    var ctx = can.getContext("2d");
+    ctx.lineWidth = 2;
+    ctx.fillStyle = "#0ff";
+    ctx.font = "50px cursive";
+    ctx.fillText("Hello World!!", 15, 65);
+  }
