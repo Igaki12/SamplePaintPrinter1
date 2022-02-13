@@ -110,10 +110,11 @@ blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:fa
 
 // ここから文字の作成・移動
 let ctx = cans[0].getContext("2d");
+console.log(ctx.measureText("Hello World!"));
+cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 10;
 ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
-cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 10;
 ctx.fillText("Hello World!!", 15, 65);
 ctx.lineWidth = 7;
 ctx.strokeStyle = "green";
@@ -124,8 +125,7 @@ ctx.strokeText("Hello World!!", 15, 65);
 ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
-console.log(ctx.measureText("Hello World!"));
-console.log(cans[0].width);
+
 cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 10;
 cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 10 + "px";
 // cans[0].width = cans[0].clientWidth;
