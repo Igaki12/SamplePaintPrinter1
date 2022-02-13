@@ -123,7 +123,7 @@ ctx.strokeText("Hello World!!", 15, 65);
 ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
-console.log(ctx.measureText("Hello World!"));
+console.log(ctx.measureText("Hello World!").width);
 cans[0].style.width = ctx.measureText("Hello World!").width;
 
 
@@ -160,7 +160,7 @@ submit.addEventListener('click',() => {
         ctx.lineWidth = 2;
         ctx.strokeStyle = "yellow";
         ctx.strokeText(font, 15, 65);
-        console.log(ctx.measureText(font));
+        console.log(ctx.measureText(font).width);
         cans[id].style.width = ctx.measureText(font).width;
         }
     writeNewCanvas(fontId,inputEl);
