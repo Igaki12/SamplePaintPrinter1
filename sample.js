@@ -109,11 +109,13 @@ blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:fa
 
 // ここから文字の作成・移動
 var ctx = cans[0].getContext("2d");
-ctx.lineWidth = 2;
+ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
 ctx.fillText("Hello World!!", 15, 65);
+ctx.lineWidth = 7;
 ctx.strokeStyle = "green";
 ctx.strokeText("Hello World!!", 15, 65);
+ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
