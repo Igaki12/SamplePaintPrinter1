@@ -139,7 +139,7 @@ const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize_value');
 let inputSize = range.value;
 console.log(inputSize);
-sizeView.innerText = inputSize;
+sizeView.innerText = `${inputSize}px`;
 range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
         sizeView.innerText = value;
