@@ -78,6 +78,9 @@ body {
 #blueBody {
   background: #0000ff;
 }
+.create-character {
+  display: flex;
+}
 @media print {
   .noprint {
     background: white;
