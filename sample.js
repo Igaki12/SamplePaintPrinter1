@@ -124,7 +124,7 @@ ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
 console.log(ctx.measureText("Hello World!"));
-cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 1 + "px";
+cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 1;
 
 
 // 入力した文字列からフォントを作成する
@@ -161,7 +161,7 @@ submit.addEventListener('click',() => {
         ctx.strokeStyle = "yellow";
         ctx.strokeText(font, 15, 65);
         console.log(Math.ceil(ctx.measureText(font).width) + 1);
-        cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 1 + "px";
+        cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 1;
         }
     writeNewCanvas(fontId,inputEl);
     console.log(cans);
