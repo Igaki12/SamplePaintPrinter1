@@ -3,7 +3,7 @@
   //要素の取得
   var elements = document.getElementsByClassName("drag-and-drop");
   var can1 = document.getElementById("character1");
-  console.log(can);
+  console.log(can1);
   elements.push(can1);
 
 
