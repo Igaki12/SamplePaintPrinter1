@@ -137,12 +137,12 @@ const text = document.getElementById('text');
 const ope = document.getElementById('operating-screen');
 const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize_value');
-const setCurrentSize = (value) => {
+function setCurrentSize(value) {
     sizeView.innerText = value;
 }
-const rangeOnChange = (e) => {
+(function rangeOnChange(e) {
     setCurrentSize(e.target.value);
-}
+})({passive:false})
 range.addEventListener('input',rangeOnChange);
 let fontId = 1;
 submit.addEventListener('click',() => {
