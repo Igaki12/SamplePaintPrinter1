@@ -136,10 +136,10 @@ const submit = document.getElementById('create_text');
 const text = document.getElementById('text');
 const ope = document.getElementById('operating-screen');
 const range = document.getElementById('fontSize');
-const sizeView = document.getElementById('fontSize_value');
+const sizeView = document.getElementById('fontSize-value');
 let inputSize = range.value;
 console.log(inputSize);
-sizeView.innerText = `${inputSize}px`;
+sizeView.innerText = inputSize;
 range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
         sizeView.innerText = value;
