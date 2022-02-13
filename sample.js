@@ -2,6 +2,10 @@
 
   //要素の取得
   var elements = document.getElementsByClassName("drag-and-drop");
+  var can1 = document.getElementById("character1");
+  console.log(can);
+  elements.push(can1);
+
 
   //要素内のクリックされた位置を取得するグローバル（のような）変数
   var x;
@@ -102,8 +106,6 @@ greenBody.addEventListener('click',() => {changeBodyColor('#00FF00')},{passive:f
 blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:false});
 
 window.onload = () => {
-    var can = document.getElementById("character1");
-    console.log(can);
     var ctx = can.getContext("2d");
     ctx.lineWidth = 2;
     ctx.fillStyle = "#0ff";
