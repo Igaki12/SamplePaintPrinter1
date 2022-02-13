@@ -134,5 +134,6 @@ submit.addEventListener('click',() => {
     if(inputEl === "") return;
     console.log(inputEl);
     ope.lastElementChild.cloneNode(true);
+    console.log(ope.lastElementChild);
 },{passive:false})
 
