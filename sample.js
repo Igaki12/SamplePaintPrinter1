@@ -137,6 +137,8 @@ const text = document.getElementById('text');
 const ope = document.getElementById('operating-screen');
 const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize_value');
+let inputSize = range.value;
+sizeView.innerText = inputSize;
 range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
         sizeView.innerText = value;
@@ -146,7 +148,7 @@ range.addEventListener('input',(e) => {
 let fontId = 1;
 submit.addEventListener('click',() => {
     let inputEl = text.value;
-    let inputSize = range.value;
+    inputSize = range.value;
     if(inputEl === "") return;
     console.log(`${inputEl},${inputSize}`);
     let newFont = document.createElement('canvas');
