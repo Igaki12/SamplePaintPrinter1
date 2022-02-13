@@ -102,7 +102,8 @@ greenBody.addEventListener('click',() => {changeBodyColor('#00FF00')},{passive:f
 blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:false});
 
 window.onload = () => {
-    var can = document.getElementById("canvas");
+    var can = document.getElementById("character1");
+    console.log(can);
     var ctx = can.getContext("2d");
     ctx.lineWidth = 2;
     ctx.fillStyle = "#0ff";
