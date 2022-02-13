@@ -118,16 +118,16 @@ cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 30;
 ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
-ctx.fillText("Hello World!!", 15, 65);
+ctx.fillText("Hello World!!", 15, 50);
 ctx.lineWidth = 7;
 ctx.strokeStyle = "green";
-ctx.strokeText("Hello World!!", 15, 65);
+ctx.strokeText("Hello World!!", 15, 50);
 ctx.lineWidth = 4;
 ctx.strokeStyle = "orange";
-ctx.strokeText("Hello World!!", 15, 65);
+ctx.strokeText("Hello World!!", 15, 50);
 ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
-ctx.strokeText("Hello World!!", 15, 65);
+ctx.strokeText("Hello World!!", 15, 50);
 cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 30 + "px";
 
 
