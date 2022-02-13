@@ -128,8 +128,11 @@ cans[0].style.width = ctx.measureText("Hello World!").width;
 // 入力した文字列からフォントを作成する
 const submit = document.getElementById('create_text');
 const text = document.getElementById('text');
+const ope = document.getElementById('operating-screen');
 submit.addEventListener('click',() => {
     let inputEl = text.value;
+    if(inputEl === "") return;
     console.log(inputEl);
+    ope.lastElementChild.cloneNode(true);
 },{passive:false})
 
