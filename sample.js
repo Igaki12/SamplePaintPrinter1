@@ -1,4 +1,3 @@
-(function(){
 
   //要素の取得
   var elements = document.getElementsByClassName("drag-and-drop");
@@ -94,7 +93,6 @@
       drag.classList.remove("drag");
   }
 
-})()
 const body = document.getElementById('operating-screen');
 const redBody = document.getElementById('redBody');
 const greenBody = document.getElementById('greenBody');
