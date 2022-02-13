@@ -114,7 +114,7 @@ ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
 console.log(ctx.measureText("Hello World!"));
-cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 20;
+cans[0].width = Math.ceil(ctx.measureText("Hello World!").width) + 30;
 ctx.lineWidth = 5;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
@@ -128,7 +128,7 @@ ctx.strokeText("Hello World!!", 15, 65);
 ctx.lineWidth = 2;
 ctx.strokeStyle = "yellow";
 ctx.strokeText("Hello World!!", 15, 65);
-cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 20 + "px";
+cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 30 + "px";
 // cans[0].width = cans[0].clientWidth;
 // cans[0].height = cans[0].clientHeight;
 
@@ -157,7 +157,7 @@ submit.addEventListener('click',() => {
         ctx.lineWidth = 5;
         ctx.fillStyle = "#0ff";
         ctx.font = "50px cursive";
-        cans[id].width = Math.ceil(ctx.measureText(font).width) + 20;
+        cans[id].width = Math.ceil(ctx.measureText(font).width) + 30;
         ctx.lineWidth = 5;
         ctx.fillStyle = "#0ff";
         ctx.font = "50px cursive";
@@ -172,7 +172,7 @@ submit.addEventListener('click',() => {
         ctx.strokeStyle = "yellow";
         ctx.strokeText(font, 15, 65);
         console.log(Math.ceil(ctx.measureText(font).width) + 10);
-        cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 20 + "px";
+        cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
         // cans[id].width = cans[id].clientWidth;
         // cans[id].height = cans[id].clientHeight;
         }
