@@ -140,7 +140,6 @@ submit.addEventListener('click',() => {
     newFont.className = 'character';
     ope.appendChild(newFont);
     console.log(newFont);
-    fontId++;
     cans = document.getElementsByClassName('character');
     for(let i = 0; i<cans.length; i++){
         cans[i].addEventListener("mousedown",mDown, {passive:false});
@@ -166,6 +165,7 @@ submit.addEventListener('click',() => {
         }
     writeNewCanvas(fontId,inputEl);
     console.log(cans);
+    fontId++;
 
 },{passive:false})
 
