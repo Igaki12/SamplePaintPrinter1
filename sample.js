@@ -51,9 +51,19 @@
       //フリックしたときに画面を動かさないようにデフォルト動作を抑制
       e.preventDefault();
 
+          //   個人的な追記部分(画面外まで動いて行ってしまわないようにする)
+    if(event.pageY > 480){
+        event.pageY = 480;
+    }
+    if(event.pageX > 480){
+        event.pageX = 480;
+    }
+
       //マウスが動いた場所に要素を動かす
       drag.style.top = event.pageY - y + "px";
       drag.style.left = event.pageX - x + "px";
+
+
 
       //マウスボタンが離されたとき、またはカーソルが外れたとき発火
       drag.addEventListener("mouseup", mUp, {passive:false});
