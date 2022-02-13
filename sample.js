@@ -110,7 +110,7 @@ blueBody.addEventListener('click',() => {changeBodyColor('#0000FF')},{passive:fa
 
 
 // ここから文字の作成・移動
-var ctx = cans.getContext("2d");
+var ctx = cans[0].getContext("2d");
 ctx.lineWidth = 2;
 ctx.fillStyle = "#0ff";
 ctx.font = "50px cursive";
