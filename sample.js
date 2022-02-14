@@ -164,6 +164,7 @@ for(let index=0;index<fontColorRadio.length; index++){
 }
 
 (function writeNewCanvas(id,font,size,color){
+    if(cans.length === 1) return;
     ctx = cans[id].getContext("2d");
       ctx.lineWidth = 5;
         ctx.fillStyle = color;
@@ -216,9 +217,12 @@ submit.addEventListener('click',() => {
 
 },{passive:false})
 
-
-function onInput(){
+// ここから予測表示機能
+(function onInput(){
     console.log('start writing...');
 
-}
+})({passive:false})
+text.addEventListener('input',() => {
+
+},{passive:false})
 
