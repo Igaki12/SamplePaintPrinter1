@@ -252,6 +252,28 @@ text.addEventListener('input',() => {
     console.log(newFont);
     writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
     console.log('全ての予測動作が完了');
+    range.addEventListener('input',(e) => {
+        let buildings = document.getElementsByClassName('building');
+        for(let u=0;u<buildings.length;u++){
+            buildings[u].remove();
+        }
+        removeDragClass();
+        console.log('start writing...');
+        let inputtedColor = inputColor();
+        let inputEl = text.value;
+        inputSize = range.value;
+        if(inputEl === "") return;
+        console.log(`${inputEl},${inputSize},${inputtedColor}`);
+        let newFont = document.createElement('canvas');
+        newFont.className = 'character';
+        newFont.classList.add('building');
+        let h = parseInt(inputSize) + 30;
+        newFont.height = h;
+        newFont.style.height = `${h}px`;
+        ope.appendChild(newFont);
+        console.log(newFont);
+        writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
+    })
 },{passive:false});
 
 function removeDragClass() {
