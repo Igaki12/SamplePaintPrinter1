@@ -163,6 +163,27 @@ for(let index=0;index<fontColorRadio.length; index++){
     });
 }
 
+(function writeNewCanvas(id,font,size,color){
+    ctx = cans[id].getContext("2d");
+      ctx.lineWidth = 5;
+        ctx.fillStyle = color;
+        ctx.font = `bold ${size}px fantasy`;
+        cans[id].width = Math.ceil(ctx.measureText(font).width) + 30;
+        ctx.lineWidth = 5;
+        ctx.fillStyle = color;
+        ctx.font = `bold ${size}px fantasy`;
+        ctx.fillText(font, 15, size);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "orange";
+        ctx.strokeText(font, 15, size);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "yellow";
+        ctx.strokeText(font, 15, size);
+        console.log(Math.ceil(ctx.measureText(font).width) + 10);
+        cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
+        text.value = '';
+})({passive:false})
+
 sizeView.innerText = inputSize;
 range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
@@ -189,26 +210,6 @@ submit.addEventListener('click',() => {
         cans[i].addEventListener("mousedown",mDown, {passive:false});
         cans[i].addEventListener("touchstart",mDown, {passive:false});
     }
-    let writeNewCanvas = (id,font,size,color) => {
-        ctx = cans[id].getContext("2d");
-        ctx.lineWidth = 5;
-        ctx.fillStyle = color;
-        ctx.font = `bold ${size}px fantasy`;
-        cans[id].width = Math.ceil(ctx.measureText(font).width) + 30;
-        ctx.lineWidth = 5;
-        ctx.fillStyle = color;
-        ctx.font = `bold ${size}px fantasy`;
-        ctx.fillText(font, 15, size);
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "orange";
-        ctx.strokeText(font, 15, size);
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = "yellow";
-        ctx.strokeText(font, 15, size);
-        console.log(Math.ceil(ctx.measureText(font).width) + 10);
-        cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
-        text.value = '';
-        }
     writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
     console.log(cans);
     fontId++;
@@ -218,5 +219,6 @@ submit.addEventListener('click',() => {
 
 function onInput(){
     console.log('start writing...');
+
 }
 
