@@ -138,6 +138,19 @@ const ope = document.getElementById('operating-screen');
 const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize-value');
 let inputSize = range.value;
+const fontColorRadio = document.getElementsByClassName('fontColor');
+const fontLabel = document.getElementsByClassName('fontLabel');
+let inputColor = color.value;
+console.log(`fontLabel:${fontLabel}radio:${fontColorRadio}inputColor:${inputColor}`);
+for(let i=0;i<fontColorRadio.length; i++){
+    fontColorRadio[i].addEventListener('click',() => {
+        for(let j=0; j<fontColorRadio.length; j++){
+            fontLabel[j].style.size = '20px';
+        }
+        fontLabel[i].style.size = '5px';
+    },{passive:false});
+}
+
 sizeView.innerText = inputSize;
 range.addEventListener('input',(e) => {
     const setCurrentSize = (value) => {
