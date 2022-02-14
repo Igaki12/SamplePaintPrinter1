@@ -281,7 +281,7 @@ text.addEventListener('input',() => {
                 buildings[u].remove();
             }
             removeDragClass();
-            let inputtedColor = inputColor();
+            let inputtedColor = fontColorRadio[l].value;
             let inputEl = text.value;
             inputSize = range.value;
             if(inputEl === "") return;
