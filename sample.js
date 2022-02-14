@@ -198,6 +198,29 @@ range.addEventListener('input',(e) => {
         sizeView.innerText = value;
     }
     setCurrentSize(e.target.value);
+    // 編集機能(drag classに対して)の追加
+    if(document.getElementsByClassName('building') === undefined){
+        if(document.getElementsByClassName('drag') === undefined){
+            console.log('dragなし,buildingなし');
+        }else{
+            drags = document.getElementsByClassName('drag');
+            let inputtedColor = fontColorRadio[l].value;
+            let inputEl = text.value;
+            inputSize = range.value;
+            if(inputEl === "") return;
+            console.log(`${inputEl},${inputSize},${inputtedColor}`);
+            let newFont = drags[0].cloneNode(false);
+            newFont.className = 'character';
+            newFont.classList.add('drag');
+            let h = parseInt(inputSize) + 30;
+            newFont.height = h;
+            newFont.style.height = `${h}px`;
+            ope.appendChild(newFont);
+            console.log(newFont);
+            writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
+            drags[0].remove();
+        }
+    }
     return;
 },{passive:false});
 let fontId = 1;
@@ -311,3 +334,4 @@ back.addEventListener('click',removeDragClass,{passive:false});
 
 
 // 編集操作。dragElementを取得しこぴーしてからもとのdragエレメントを消す
+
