@@ -154,9 +154,9 @@ console.log(`fontFont:${fontFont}radio:${fontColorRadio}inputColor:${inputColor(
 for(let i=0;i<fontColorRadio.length; i++){
     fontColorRadio[i].addEventListener('click',(i) => {
         for(let j=0; j<fontColorRadio.length; j++){
-            fontFont[j].style.size = '20px';
+            fontFont[j].size = '20px';
         }
-        fontFont[i].style.size = '5px';
+        fontFont[i].size = '5px';
     });
 }
 
