@@ -236,6 +236,7 @@ submit.addEventListener('click',() => {
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
     newFont.classList.add('drag');
+    newFont.textContent = inputEl;
     let h = parseInt(inputSize) + 30;
     newFont.height = h;
     newFont.style.height = `${h}px`;
