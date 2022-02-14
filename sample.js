@@ -214,3 +214,8 @@ submit.addEventListener('click',() => {
 
 },{passive:false})
 
+
+function onInput(){
+    console.log('start writing...');
+}
+
