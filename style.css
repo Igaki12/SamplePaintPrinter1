@@ -58,6 +58,10 @@ body {
   z-index: 1001;
   border: #000000 solid 2px;
 }
+.building {
+  z-index: 1002;
+  border: #ff0000 dashed 2px;
+}
 #bodyColor_config {
   display: flex;
   margin-top: 100px;
@@ -104,6 +108,12 @@ body {
   color: black;
 }
 @media print {
+  .drag {
+    border: none;
+  }
+  .building {
+    display: none;
+  }
   .noprint {
     background: white;
   }
