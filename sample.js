@@ -21,10 +21,6 @@
 
   //マウスが押された際の関数
   function mDown(e) {
-      let drags = document.getElementsByClassName("drag");
-      for(let i=0; i<drags.length;i++){
-          drags[i].classList.remove("drag");
-      }
       //クラス名に .drag を追加
       this.classList.add("drag");
 
@@ -96,7 +92,7 @@
       drag.removeEventListener("touchend", mUp, {passive:false});
 
       //クラス名 .drag も消す
-    //   drag.classList.remove("drag");
+      drag.classList.remove("drag");
   }
 
 
