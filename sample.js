@@ -24,7 +24,7 @@
 
       //クラス名に .drag を追加
       this.classList.add("drag");
-      this.style.backgroundColor = "yellow";
+      this.style.border = '1px solid black';
 
       //タッチデイベントとマウスのイベントの差異を吸収
       if(e.type === "mousedown") {
@@ -83,7 +83,7 @@
   //マウスボタンが上がったら発火
   function mUp(e) {
       var drag = document.getElementsByClassName("drag")[0];
-      this.style.backgroundColor = 'none';
+      drag.style.border = 'none';
 
       //ムーブベントハンドラの消去
       document.body.removeEventListener("mousemove", mMove, {passive:false});
