@@ -194,6 +194,10 @@ range.addEventListener('input',(e) => {
 },{passive:false});
 let fontId = 1;
 submit.addEventListener('click',() => {
+    let buildings = document.getElementsByClassName('building');
+    for(let u=0;u<buildings.length;u++){
+        buildings[u].remove();
+    }
     let inputtedColor = inputColor();
     let inputEl = text.value;
     inputSize = range.value;
@@ -219,6 +223,11 @@ submit.addEventListener('click',() => {
 
 
 text.addEventListener('input',() => {
+    let buildings = document.getElementsByClassName('building');
+    for(let u=0;u<buildings.length;u++){
+        buildings[u].remove();
+    }
+    removeDragClass();
     console.log('start writing...');
     let inputtedColor = inputColor();
     let inputEl = text.value;
@@ -227,6 +236,7 @@ text.addEventListener('input',() => {
     console.log(`${inputEl},${inputSize},${inputtedColor}`);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
+    newFont.classList.add('building');
     let h = parseInt(inputSize) + 30;
     newFont.height = h;
     newFont.style.height = `${h}px`;
@@ -234,7 +244,7 @@ text.addEventListener('input',() => {
     console.log(newFont);
     writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
     console.log('全ての予測動作が完了');
-},{passive:false})
+},{passive:false});
 
 function removeDragClass() {
     drags = document.getElementsByClassName('drag');
