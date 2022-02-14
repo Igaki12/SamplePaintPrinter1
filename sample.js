@@ -210,6 +210,7 @@ range.addEventListener('input',(e) => {
             let newFont = drags[0].cloneNode(false);
             newFont.className = 'character';
             newFont.classList.add('drag');
+            newFont.textContent = inputEl;
             let h = parseInt(inputSize) + 30;
             newFont.height = h;
             newFont.style.height = `${h}px`;
