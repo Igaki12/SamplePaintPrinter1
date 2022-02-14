@@ -199,10 +199,9 @@ range.addEventListener('input',(e) => {
     }
     setCurrentSize(e.target.value);
     // 編集機能(drag classに対して)の追加
-    if(document.getElementsByClassName('building') === undefined){
-        if(document.getElementsByClassName('drag') === undefined){
-            console.log('dragなし,buildingなし');
-        }else{
+    console.log(document.getElementsByClassName('building'));
+    if(document.getElementsByClassName('building').length === 0){
+        if(document.getElementsByClassName('drag').length > 0){
             drags = document.getElementsByClassName('drag');
             let inputtedColor = fontColorRadio[l].value;
             let inputEl = drags[0].textContent;
@@ -323,7 +322,7 @@ text.addEventListener('input',() => {
 },{passive:false});
 
 function removeDragClass() {
-    if(document.getElementsByClassName('drag') === undefined) return;
+    if(document.getElementsByClassName('drag').length === 0) return;
     let drags = document.getElementsByClassName('drag');
     for(i=0;i<drags.length;i++){
         drags[i].classList.remove('drag');
