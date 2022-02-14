@@ -152,7 +152,7 @@ const inputColor = () => {
 }
 console.log(`fontFont:${fontFont}radio:${fontColorRadio}inputColor:${inputColor()}`);
 for(let i=0;i<fontColorRadio.length; i++){
-    fontColorRadio[i].addEventListener('click',() => {
+    fontColorRadio[i].addEventListener('click',(i) => {
         for(let j=0; j<fontColorRadio.length; j++){
             fontFont[j].size = '20px';
         }
