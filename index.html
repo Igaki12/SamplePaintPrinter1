@@ -16,19 +16,19 @@
       <canvas class="character" height="70"></canvas>
     </div>
     <div id="bodyColor_config">
-      <p>背景色</p>
+      <p class="noprint">背景色</p>
       <input type="button" id="redBody" class="noprint bodyColor" />
       <input type="button" id="greenBody" class="noprint bodyColor" />
       <input type="button" id="blueBody" class="noprint bodyColor" />
     </div>
     <div class="create-character">
-      <p margin="0" line-height="40px">文字色</p>
+      <p margin="0" line-height="40px" class="noprint">文字色</p>
       <input type="radio" id="redFont" value="red" name="color" class="fontColor">
-      <label for="redFont" class="fontLabel" id="redCircle">●</label>
+      <label for="redFont" class="fontLabel noprint" id="redCircle">●</label>
       <input type="radio" id="greenFont" value="green" name="color" class="fontColor">
-      <label for="greenFont" class="fontLabel" id="greenCircle">●</label>
+      <label for="greenFont" class="fontLabel noprint" id="greenCircle">●</label>
       <input type="radio" id="blackFont" value="black" name="color" class="fontColor" checked>
-      <label for="blackFont" class="fontLabel" id="blackCircle">●</label>
+      <label for="blackFont" class="fontLabel noprint" id="blackCircle">●</label>
     </div>
     <div class="create-character printWithout">
       <input id="fontSize" type="range" name="size" min="10" max="100" step="10" value="50">
