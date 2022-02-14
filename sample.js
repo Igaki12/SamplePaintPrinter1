@@ -149,13 +149,13 @@ const inputColor = () => {
     console.log('GETTING INPUT COLOR ERROR');
     return 'black';
 }
-console.log(`fontLabel:${fontLabel}radio:${fontColorRadio}inputColor:${inputColor()}`);
+console.log(`fontLabelLength:${fontLabel.length}radioLength:${fontColorRadio.length}inputColor:${inputColor()}`);
 for(let i=0;i<fontColorRadio.length; i++){
     fontColorRadio[i].addEventListener('click',(i) => {
         for(let j=0; j<fontColorRadio.length; j++){
             fontLabel[j].style.fontSize = '50px';
         }
-        fontLabel[i].style.fontSize = '5px';
+        fontLabel[1].style.fontSize = '5px';
     });
 }
 
