@@ -21,10 +21,14 @@
       <input type="button" id="blueBody" class="noprint bodyColor" />
     </div>
     <div class="create-character">
+      <input type="radio" id="redFont" value="red" class="fontColor">
+      <label for="redFont" color="red">●</label>
+    </div>
+    <div class="create-character printWithout">
       <input id="fontSize" type="range" name="size" min="10" max="100" step="10" value="50">
       <p>サイズ:<span id="fontSize-value"></span>px</p>
     </div>
-    <div class="create-character">
+    <div class="create-character printWithout">
       <input type="text" id="text" />
       <button type="button" id="create_text">決定</button>
       <button type="reset" onclick="location.reload();">Reset</button>
