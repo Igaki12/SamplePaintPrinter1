@@ -157,7 +157,7 @@ for(let index=0;index<fontColorRadio.length; index++){
         }
         fontLabel[index].style.fontSize = '20px';
         return;
-    },);
+    });
 }
 
 sizeView.innerText = inputSize;
