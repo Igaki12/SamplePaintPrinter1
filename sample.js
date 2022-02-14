@@ -202,7 +202,7 @@ range.addEventListener('input',(e) => {
     console.log(document.getElementsByClassName('building'));
     if(document.getElementsByClassName('building').length === 0){
         if(document.getElementsByClassName('drag').length > 0){
-            drags = document.getElementsByClassName('drag');
+            let drags = document.getElementsByClassName('drag');
             let inputtedColor = fontColorRadio[l].value;
             let inputEl = drags[0].textContent;
             inputSize = range.value;
