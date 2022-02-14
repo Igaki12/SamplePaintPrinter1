@@ -140,7 +140,7 @@ const sizeView = document.getElementById('fontSize-value');
 let inputSize = range.value;
 const fontColorRadio = document.getElementsByClassName('fontColor');
 const fontLabel = document.getElementsByClassName('fontLabel');
-let inputColor = color.value;
+let inputColor = fontColorRadio[0].color;
 console.log(`fontLabel:${fontLabel}radio:${fontColorRadio}inputColor:${inputColor}`);
 for(let i=0;i<fontColorRadio.length; i++){
     fontColorRadio[i].addEventListener('click',() => {
