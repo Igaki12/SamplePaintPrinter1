@@ -146,7 +146,7 @@ const inputColor = () => {
             return fontColorRadio[i].value;
         }
     }
-    console.log('GETTING INPUT COLOR ERROR');
+    console.log('ERROR:GETTING INPUTTED COLOR');
     return 'black';
 }
 console.log(`fontLabelLength:${fontLabel.length}radioLength:${fontColorRadio.length}inputColor:${inputColor()}`);
@@ -169,10 +169,11 @@ range.addEventListener('input',(e) => {
 },{passive:false});
 let fontId = 1;
 submit.addEventListener('click',() => {
+    let inputtedColor = inputColor();
     let inputEl = text.value;
     inputSize = range.value;
     if(inputEl === "") return;
-    console.log(`${inputEl},${inputSize}`);
+    console.log(`${inputEl},${inputSize},${inputtedColor}`);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
     let h = parseInt(inputSize) + 20;
@@ -205,7 +206,7 @@ submit.addEventListener('click',() => {
         cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
         text.value = '';
         }
-    writeNewCanvas(fontId,inputEl,parseInt(inputSize),'#0ff');
+    writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
     console.log(cans);
     fontId++;
 
