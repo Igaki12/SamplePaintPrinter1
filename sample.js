@@ -198,6 +198,7 @@ range.addEventListener('input',(e) => {
         sizeView.innerText = value;
     }
     setCurrentSize(e.target.value);
+    return;
 },{passive:false});
 let fontId = 1;
 submit.addEventListener('click',() => {
