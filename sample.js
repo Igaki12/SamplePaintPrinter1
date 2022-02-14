@@ -163,7 +163,7 @@ for(let index=0;index<fontColorRadio.length; index++){
     });
 }
 
-(function writeNewCanvas(id,font,size,color){
+function writeNewCanvas(id,font,size,color){
     if(cans.length === 1) return;
     ctx = cans[id].getContext("2d");
       ctx.lineWidth = 5;
@@ -183,7 +183,7 @@ for(let index=0;index<fontColorRadio.length; index++){
         console.log(Math.ceil(ctx.measureText(font).width) + 10);
         cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
         text.value = '';
-})({passive:false})
+}
 
 sizeView.innerText = inputSize;
 range.addEventListener('input',(e) => {
@@ -214,15 +214,24 @@ submit.addEventListener('click',() => {
     writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
     console.log(cans);
     fontId++;
-
 },{passive:false})
 
-// ここから予測表示機能
-(function onInput(){
-    console.log('start writing...');
 
-})({passive:false})
 text.addEventListener('input',() => {
-
+    console.log('start writing...');
+    let inputtedColor = inputColor();
+    let inputEl = text.value;
+    inputSize = range.value;
+    if(inputEl === "") return;
+    console.log(`${inputEl},${inputSize},${inputtedColor}`);
+    let newFont = document.createElement('canvas');
+    newFont.className = 'character';
+    let h = parseInt(inputSize) + 30;
+    newFont.height = h;
+    newFont.style.height = `${h}px`;
+    ope.appendChild(newFont);
+    console.log(newFont);
+    writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
+    console.log('全ての予測動作が完了');
 },{passive:false})
 
