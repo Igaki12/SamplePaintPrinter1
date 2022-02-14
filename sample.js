@@ -72,6 +72,13 @@
       drag.style.top = event.pageY - y + "px";
       drag.style.left = event.pageX - x + "px";
 
+      if(event.pageY - y > 500){
+          mUp();
+      }
+      if(event.pageX - x > 500){
+          mUp();
+      }
+
 
 
       //マウスボタンが離されたとき、またはカーソルが外れたとき発火
