@@ -131,7 +131,7 @@ body {
     padding: 20px;
   }
   @page {
-    size: 200%;
+    zoom: 170%;
     /* 印刷時のページの余白を指定できるs */
     /* margin: 0; */
   }
