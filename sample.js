@@ -153,7 +153,7 @@ console.log(`fontLabel:${fontLabel}radio:${fontColorRadio}inputColor:${inputColo
 for(let i=0;i<fontColorRadio.length; i++){
     fontColorRadio[i].addEventListener('click',(i) => {
         for(let j=0; j<fontColorRadio.length; j++){
-            fontLabel[j].style.fontSize = '20px';
+            fontLabel[j].style.fontSize = '50px';
         }
         fontLabel[i].style.fontSize = '5px';
     });
