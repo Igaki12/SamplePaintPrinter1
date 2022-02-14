@@ -199,27 +199,27 @@ range.addEventListener('input',(e) => {
     }
     setCurrentSize(e.target.value);
     // 編集機能(drag classに対して)の追加
-    // if(document.getElementsByClassName('building') === undefined){
-    //     if(document.getElementsByClassName('drag') === undefined){
-    //         console.log('dragなし,buildingなし');
-    //     }else{
-    //         drags = document.getElementsByClassName('drag');
-    //         let inputtedColor = fontColorRadio[l].value;
-    //         let inputEl = text.value;
-    //         inputSize = range.value;
-    //         console.log(`${inputEl},${inputSize},${inputtedColor}`);
-    //         let newFont = drags[0].cloneNode(false);
-    //         newFont.className = 'character';
-    //         newFont.classList.add('drag');
-    //         let h = parseInt(inputSize) + 30;
-    //         newFont.height = h;
-    //         newFont.style.height = `${h}px`;
-    //         ope.appendChild(newFont);
-    //         console.log(newFont);
-    //         writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
-    //         drags[0].remove();
-    //     }
-    // }
+    if(document.getElementsByClassName('building') === undefined){
+        if(document.getElementsByClassName('drag') === undefined){
+            console.log('dragなし,buildingなし');
+        }else{
+            drags = document.getElementsByClassName('drag');
+            let inputtedColor = fontColorRadio[l].value;
+            let inputEl = drags[0].textContent;
+            inputSize = range.value;
+            console.log(`${inputEl},${inputSize},${inputtedColor}`);
+            let newFont = drags[0].cloneNode(false);
+            newFont.className = 'character';
+            newFont.classList.add('drag');
+            let h = parseInt(inputSize) + 30;
+            newFont.height = h;
+            newFont.style.height = `${h}px`;
+            ope.appendChild(newFont);
+            console.log(newFont);
+            writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
+            drags[0].remove();
+        }
+    }
     return;
 },{passive:false});
 let fontId = 1;
