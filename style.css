@@ -88,6 +88,18 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 5px;
+  width: 50px;
+  line-height: 72px;
+  font-size: 20px;
+}
+#redCircle {
+  color: red;
+}
+#greenCircle {
+  color: green;
+}
+#blackCircle {
+  color: black;
 }
 @media print {
   .noprint {
