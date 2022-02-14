@@ -54,7 +54,6 @@ body {
 #yellow-box {
   background-color: yellowgreen;
 }
-
 .drag {
   z-index: 1001;
   border: #000000 solid 2px;

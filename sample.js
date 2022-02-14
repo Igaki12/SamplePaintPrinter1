@@ -21,10 +21,12 @@
 
   //マウスが押された際の関数
   function mDown(e) {
+      let drags = document.getElementsByClassName('drag');
+      for(let i=0;i<drags.length;i++){
+          drags[i].classList.remove('drag');
+      }
       //クラス名に .drag を追加
       this.classList.add("drag");
-
-
 
       //タッチデイベントとマウスのイベントの差異を吸収
       if(e.type === "mousedown") {
@@ -83,7 +85,6 @@
   //マウスボタンが上がったら発火
   function mUp(e) {
       var drag = document.getElementsByClassName("drag")[0];
-      drag.style.border = 'none';
 
       //ムーブベントハンドラの消去
       document.body.removeEventListener("mousemove", mMove, {passive:false});
@@ -92,7 +93,7 @@
       drag.removeEventListener("touchend", mUp, {passive:false});
 
       //クラス名 .drag も消す
-      drag.classList.remove("drag");
+    //   drag.classList.remove("drag");
   }
 
 
