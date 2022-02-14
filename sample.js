@@ -155,7 +155,7 @@ for(let index=0;index<fontColorRadio.length; index++){
         for(let j=0; j<fontColorRadio.length; j++){
             fontLabel[j].style.fontSize = '40px';
         }
-        fontLabel[index].style.fontSize = '5px';
+        fontLabel[index].style.fontSize = '20px';
         return;
     },);
 }
