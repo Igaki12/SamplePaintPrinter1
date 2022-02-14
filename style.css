@@ -118,6 +118,7 @@ body {
   }
   .noprint {
     background: white;
+    color: white;
   }
   #redBody,
   #greenBody,
