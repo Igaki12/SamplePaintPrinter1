@@ -73,9 +73,11 @@
       drag.style.left = event.pageX - x + "px";
 
       if(event.pageY - y > 500){
+          drag.style.top = '495px';
           mUp();
       }
       if(event.pageX - x > 500){
+          drag.style.left = '495px';
           mUp();
       }
 
@@ -218,6 +220,11 @@ range.addEventListener('input',(e) => {
             console.log(newFont);
             writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
             drags[0].remove();
+            cans = document.getElementsByClassName('character');
+            for(let i = 0; i<cans.length; i++){
+                cans[i].addEventListener("mousedown",mDown, {passive:false});
+                cans[i].addEventListener("touchstart",mDown, {passive:false});
+            }
         }
     }
     return;
