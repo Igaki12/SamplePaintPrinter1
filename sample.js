@@ -1,4 +1,4 @@
-  
+
   //要素の取得
   var elements = document.getElementsByClassName("drag-and-drop");
   let cans = document.getElementsByClassName("character");
@@ -138,6 +138,7 @@ cans[0].style.width = Math.ceil(ctx.measureText("Hello World!").width) + 30 + "p
 const submit = document.getElementById('create_text');
 const text = document.getElementById('text');
 const ope = document.getElementById('operating-screen');
+const back = document.getElementById('background_white');
 const range = document.getElementById('fontSize');
 const sizeView = document.getElementById('fontSize-value');
 let inputSize = range.value;
@@ -182,7 +183,6 @@ function writeNewCanvas(id,font,size,color){
         ctx.strokeText(font, 15, size);
         console.log(Math.ceil(ctx.measureText(font).width) + 10);
         cans[id].style.width = Math.ceil(ctx.measureText(font).width) + 30 + "px";
-        text.value = '';
 }
 
 sizeView.innerText = inputSize;
@@ -214,6 +214,7 @@ submit.addEventListener('click',() => {
     writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
     console.log(cans);
     fontId++;
+    text.value = '';
 },{passive:false})
 
 
@@ -235,3 +236,11 @@ text.addEventListener('input',() => {
     console.log('全ての予測動作が完了');
 },{passive:false})
 
+function removeDragClass() {
+    drags = document.getElementsByClassName('drag');
+    for(i=0;i<drags.length;i++){
+        drags[i].classList.remove('drag');
+    }
+}
+ope.addEventListener('click',removeDragClass,{passive:false});
+back.addEventListener('click',removeDragClass,{passive:false});
