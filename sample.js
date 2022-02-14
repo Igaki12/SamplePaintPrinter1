@@ -140,14 +140,23 @@ const sizeView = document.getElementById('fontSize-value');
 let inputSize = range.value;
 const fontColorRadio = document.getElementsByClassName('fontColor');
 const fontLabel = document.getElementsByClassName('fontLabel');
-let inputColor = fontColorRadio[0].color;
-console.log(`fontLabel:${fontLabel}radio:${fontColorRadio}inputColor:${inputColor}`);
+const fontFont = document.getElementsByClassName('fontFont');
+const inputColor = () => {
+    for(let i=0;i<fontColorRadio.length; i++){
+        if(fontColorRadio[i].checked){
+            return fontColorRadio[i].value;
+        }
+    }
+    console.log('GETTING INPUT COLOR ERROR');
+    return 'black';
+}
+console.log(`fontFont:${fontFont}radio:${fontColorRadio}inputColor:${inputColor}`);
 for(let i=0;i<fontColorRadio.length; i++){
     fontColorRadio[i].addEventListener('click',() => {
         for(let j=0; j<fontColorRadio.length; j++){
-            fontLabel[j].style.size = '20px';
+            fontFont[j].style.size = '20px';
         }
-        fontLabel[i].style.size = '5px';
+        fontFont[i].style.size = '5px';
     },{passive:false});
 }
 
