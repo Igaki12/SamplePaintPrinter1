@@ -247,7 +247,7 @@ text.addEventListener('input',() => {
 },{passive:false});
 
 function removeDragClass() {
-    if(document.getElementsByClassName('drag') === null) return;
+    if(document.getElementsByClassName('drag') === undefined) return;
     drags = document.getElementsByClassName('drag');
     for(i=0;i<drags.length;i++){
         drags[i].classList.remove('drag');
