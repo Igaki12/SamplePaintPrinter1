@@ -150,13 +150,13 @@ const inputColor = () => {
     return 'black';
 }
 console.log(`fontLabelLength:${fontLabel.length}radioLength:${fontColorRadio.length}inputColor:${inputColor()}`);
-for(let i=0;i<fontColorRadio.length; i++){
-    fontColorRadio[i].addEventListener('click',(i) => {
+for(let index=0;index<fontColorRadio.length; index++){
+    fontColorRadio[index].addEventListener('click',(index) => {
         for(let j=0; j<fontColorRadio.length; j++){
             fontLabel[j].style.fontSize = '50px';
         }
-        console.log(i);
-        fontLabel[i].style.fontSize = '5px';
+        console.log(index);
+        fontLabel[index].style.fontSize = '5px';
         return;
     });
 }
