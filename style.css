@@ -92,7 +92,7 @@ body {
   height: 40px;
   font-size: 40px;
   line-height: 40px;
-  padding: auto;
+  text-align: center;
 }
 #redCircle {
   color: red;
