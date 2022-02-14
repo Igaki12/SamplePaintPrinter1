@@ -21,10 +21,14 @@
 
   //マウスが押された際の関数
   function mDown(e) {
-
+      let drags = document.getElementsByClassName("drag");
+      for(let i=0; i<drags.length;i++){
+          drags[i].classList.remove("drag");
+      }
       //クラス名に .drag を追加
       this.classList.add("drag");
-      this.style.border = '1px solid black';
+
+
 
       //タッチデイベントとマウスのイベントの差異を吸収
       if(e.type === "mousedown") {
@@ -92,7 +96,7 @@
       drag.removeEventListener("touchend", mUp, {passive:false});
 
       //クラス名 .drag も消す
-      drag.classList.remove("drag");
+    //   drag.classList.remove("drag");
   }
 
 
@@ -178,7 +182,7 @@ submit.addEventListener('click',() => {
     console.log(`${inputEl},${inputSize},${inputtedColor}`);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
-    let h = parseInt(inputSize) + 20;
+    let h = parseInt(inputSize) + 30;
     newFont.height = h;
     newFont.style.height = `${h}px`;
     ope.appendChild(newFont);

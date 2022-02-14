@@ -57,6 +57,7 @@ body {
 
 .drag {
   z-index: 1001;
+  border: #000000 solid 2px;
 }
 #bodyColor_config {
   display: flex;
