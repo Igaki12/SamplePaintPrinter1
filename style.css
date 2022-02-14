@@ -58,11 +58,11 @@ body {
 }
 .drag {
   z-index: 1001;
-  border: #000000 solid 2px;
+  border: #000000 solid 1px;
 }
 .building {
   z-index: 1002;
-  border: #ff0000 dashed 2px;
+  border: #ff0000 dashed 3px;
 }
 #bodyColor_config {
   display: flex;

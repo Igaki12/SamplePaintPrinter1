@@ -197,7 +197,7 @@ submit.addEventListener('click',() => {
     let buildings = document.getElementsByClassName('building');
     for(let u=0;u<buildings.length;u++){
         buildings[u].remove();
-    }
+    }removeDragClass();
     let inputtedColor = inputColor();
     let inputEl = text.value;
     inputSize = range.value;
@@ -205,6 +205,7 @@ submit.addEventListener('click',() => {
     console.log(`${inputEl},${inputSize},${inputtedColor}`);
     let newFont = document.createElement('canvas');
     newFont.className = 'character';
+    newFont.classList.add('drag');
     let h = parseInt(inputSize) + 30;
     newFont.height = h;
     newFont.style.height = `${h}px`;
