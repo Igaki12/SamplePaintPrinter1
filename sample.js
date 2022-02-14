@@ -151,12 +151,12 @@ const inputColor = () => {
 }
 console.log(`fontLabelLength:${fontLabel.length}radioLength:${fontColorRadio.length}inputColor:${inputColor()}`);
 for(let index=0;index<fontColorRadio.length; index++){
+    console.log(index);
     fontLabel[index].addEventListener('click',() => {
         for(let j=0; j<fontColorRadio.length; j++){
             fontLabel[j].style.fontSize = '50px';
         }
-        console.log(this.style);
-        this.style.fontSize = '5px';
+        fontLabel[index].style.fontSize = '5px';
         return;
     });
 }
