@@ -198,7 +198,7 @@ range.addEventListener('input',(e) => {
         sizeView.innerText = value;
     }
     setCurrentSize(e.target.value);
-    // 編集機能(drag classに対して)の追加
+    // 編集機能(drag classに対して)の追加 (テキスト情報を保存する必要があったため保留)
     // if(document.getElementsByClassName('building') === undefined){
     //     if(document.getElementsByClassName('drag') === undefined){
     //         console.log('dragなし,buildingなし');
