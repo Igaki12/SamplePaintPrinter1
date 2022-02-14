@@ -173,7 +173,7 @@ for(let index=0;index<fontColorRadio.length; index++){
         if(document.getElementsByClassName('building').length === 0){
             if(document.getElementsByClassName('drag').length > 0){
                 let drags = document.getElementsByClassName('drag');
-                let inputtedColor = fontColorRadio[l].value;
+                let inputtedColor = fontColorRadio[index].value;
                 let inputEl = drags[0].textContent;
                 inputSize = range.value;
                 console.log(`${inputEl},${inputSize},${inputtedColor}`);
