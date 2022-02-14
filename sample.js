@@ -308,3 +308,6 @@ function removeDragClass() {
 }
 ope.addEventListener('click',removeDragClass,{passive:false});
 back.addEventListener('click',removeDragClass,{passive:false});
+
+
+// 編集操作。dragElementを取得しこぴーしてからもとのdragエレメントを消す
