@@ -169,6 +169,32 @@ for(let index=0;index<fontColorRadio.length; index++){
             fontLabel[j].style.fontSize = '40px';
         }
         fontLabel[index].style.fontSize = '20px';
+        // 編集機能を追加
+        if(document.getElementsByClassName('building').length === 0){
+            if(document.getElementsByClassName('drag').length > 0){
+                let drags = document.getElementsByClassName('drag');
+                let inputtedColor = fontColorRadio[l].value;
+                let inputEl = drags[0].textContent;
+                inputSize = range.value;
+                console.log(`${inputEl},${inputSize},${inputtedColor}`);
+                let newFont = drags[0].cloneNode(false);
+                newFont.className = 'character';
+                newFont.classList.add('drag');
+                newFont.textContent = inputEl;
+                let h = parseInt(inputSize) + 30;
+                newFont.height = h;
+                newFont.style.height = `${h}px`;
+                ope.appendChild(newFont);
+                console.log(newFont);
+                writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
+                drags[0].remove();
+                cans = document.getElementsByClassName('character');
+                for(let i = 0; i<cans.length; i++){
+                    cans[i].addEventListener("mousedown",mDown, {passive:false});
+                    cans[i].addEventListener("touchstart",mDown, {passive:false});
+                }
+            }
+        }
         return;
     });
 }
@@ -201,7 +227,6 @@ range.addEventListener('input',(e) => {
     }
     setCurrentSize(e.target.value);
     // 編集機能(drag classに対して)の追加
-    console.log(document.getElementsByClassName('building'));
     if(document.getElementsByClassName('building').length === 0){
         if(document.getElementsByClassName('drag').length > 0){
             let drags = document.getElementsByClassName('drag');
