@@ -236,7 +236,7 @@ range.addEventListener('input',(e) => {
             let inputEl = drags[0].textContent;
             inputSize = range.value;
             console.log(`${inputEl},${inputSize},${inputtedColor}`);
-            let newFont = drags[0].cloneNode(false);
+            let newFont = document.createElement('canvas');
             newFont.className = 'character';
             newFont.classList.add('drag');
             newFont.textContent = inputEl;
