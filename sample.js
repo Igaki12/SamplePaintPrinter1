@@ -189,7 +189,7 @@ for(let index=0;index<fontColorRadio.length; index++){
                 cans = document.getElementsByClassName('character');
                 writeNewCanvas(cans.length-1,inputEl,parseInt(inputSize),inputtedColor);
                 drags[0].remove();
-                for(let i = 0; i<cans.length -1; i++){
+                for(let i = 0; i<cans.length; i++){
                     cans[i].addEventListener("mousedown",mDown, {passive:false});
                     cans[i].addEventListener("touchstart",mDown, {passive:false});
                 }
@@ -249,7 +249,7 @@ range.addEventListener('input',(e) => {
             cans = document.getElementsByClassName('character');
             writeNewCanvas(cans.length -1,inputEl,parseInt(inputSize),inputtedColor);
             drags[0].remove();
-            for(let i = 0; i<cans.length -1; i++){
+            for(let i = 0; i<cans.length; i++){
                 cans[i].addEventListener("mousedown",mDown, {passive:false});
                 cans[i].addEventListener("touchstart",mDown, {passive:false});
             }
