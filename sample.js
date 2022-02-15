@@ -231,6 +231,7 @@ range.addEventListener('input',(e) => {
     if(document.getElementsByClassName('building').length === 0){
         if(document.getElementsByClassName('drag').length > 0){
             let drags = document.getElementsByClassName('drag');
+            if(drags[0].classList.contains('drag-and-drop')) return;
             let inputtedColor = inputColor();
             let inputEl = drags[0].textContent;
             inputSize = range.value;
@@ -364,7 +365,4 @@ function removeDragClass() {
 }
 ope.addEventListener('click',removeDragClass,{passive:false});
 back.addEventListener('click',removeDragClass,{passive:false});
-
-
-// 編集操作。dragElementを取得しこぴーしてからもとのdragエレメントを消す
 
