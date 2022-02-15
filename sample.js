@@ -179,8 +179,7 @@ for(let index=0;index<fontColorRadio.length; index++){
                 inputSize = range.value;
                 console.log(`${inputEl},${inputSize},${inputtedColor}`);
                 let newFont = drags[0].cloneNode(false);
-                newFont.className = 'character';
-                newFont.classList.add('drag');
+                newFont.className = 'character drag';
                 newFont.textContent = inputEl;
                 let h = parseInt(inputSize) + 30;
                 newFont.height = h;
@@ -237,8 +236,7 @@ range.addEventListener('input',(e) => {
             inputSize = range.value;
             console.log(`${inputEl},${inputSize},${inputtedColor}`);
             let newFont = document.createElement('canvas');
-            newFont.className = 'character';
-            newFont.classList.add('drag');
+            newFont.className = 'character drag';
             newFont.textContent = inputEl;
             let h = parseInt(inputSize) + 30;
             newFont.height = h;
