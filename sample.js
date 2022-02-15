@@ -178,7 +178,7 @@ for(let index=0;index<fontColorRadio.length; index++){
                 let inputEl = drags[0].textContent;
                 inputSize = range.value;
                 console.log(`${inputEl},${inputSize},${inputtedColor}`);
-                let newFont = drags[0].cloneNode(false);
+                let newFont = document.createElement('canvas');
                 newFont.className = 'character drag';
                 newFont.textContent = inputEl;
                 let h = parseInt(inputSize) + 30;
