@@ -179,16 +179,17 @@ for(let index=0;index<fontColorRadio.length; index++){
                 inputSize = range.value;
                 console.log(`${inputEl},${inputSize},${inputtedColor}`);
                 let newFont = drags[0].cloneNode(false);
+                newFont.className = 'character drag';
                 newFont.textContent = inputEl;
                 let h = parseInt(inputSize) + 30;
                 newFont.height = h;
                 newFont.style.height = `${h}px`;
                 ope.appendChild(newFont);
                 console.log(newFont);
-                writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
-                drags[0].remove();
                 cans = document.getElementsByClassName('character');
-                for(let i = 0; i<cans.length; i++){
+                writeNewCanvas(cans.length-1,inputEl,parseInt(inputSize),inputtedColor);
+                drags[0].remove();
+                for(let i = 0; i<cans.length -1; i++){
                     cans[i].addEventListener("mousedown",mDown, {passive:false});
                     cans[i].addEventListener("touchstart",mDown, {passive:false});
                 }
@@ -238,20 +239,25 @@ range.addEventListener('input',(e) => {
             inputSize = range.value;
             console.log(`${inputEl},${inputSize},${inputtedColor}`);
             let newFont = drags[0].cloneNode(false);
+            newFont.className = 'character drag';
             newFont.textContent = inputEl;
             let h = parseInt(inputSize) + 30;
             newFont.height = h;
             newFont.style.height = `${h}px`;
             ope.appendChild(newFont);
             console.log(newFont);
-            writeNewCanvas(fontId,inputEl,parseInt(inputSize),inputtedColor);
-            drags[0].remove();
             cans = document.getElementsByClassName('character');
-            for(let i = 0; i<cans.length; i++){
+            writeNewCanvas(cans.length -1,inputEl,parseInt(inputSize),inputtedColor);
+            drags[0].remove();
+            for(let i = 0; i<cans.length -1; i++){
                 cans[i].addEventListener("mousedown",mDown, {passive:false});
                 cans[i].addEventListener("touchstart",mDown, {passive:false});
             }
+        }else {
+            return;
         }
+    }else{
+        return;
     }
 },{passive:false});
 let fontId = 1;
