@@ -193,9 +193,12 @@ for(let index=0;index<fontColorRadio.length; index++){
                     cans[i].addEventListener("mousedown",mDown, {passive:false});
                     cans[i].addEventListener("touchstart",mDown, {passive:false});
                 }
+            }else{
+                return;
             }
+        }else{
+            return;
         }
-        return;
     });
 }
 
@@ -252,7 +255,6 @@ range.addEventListener('input',(e) => {
             }
         }
     }
-    return;
 },{passive:false});
 let fontId = 1;
 submit.addEventListener('click',() => {
