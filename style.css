@@ -42,6 +42,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
+  position: absolute;
 }
 .drag-and-drop {
   width: 50px;
