@@ -32,7 +32,7 @@ body {
   background-repeat: no-repeat;
   background-size: 175%;
 }
-#object-flame{
+#object-flame {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -41,6 +41,7 @@ body {
   background-image: url('utiwa.png');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 75%;
 }
 .drag-and-drop {
   width: 50px;
