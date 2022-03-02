@@ -87,7 +87,7 @@
       drag.addEventListener("mouseup", mUp, {passive:false});
       document.body.addEventListener("mouseleave", mUp, {passive:false});
       drag.addEventListener("touchend", mUp, {passive:false});
-      document.body.addEventListener("touchleave", mUp, {passive:false});
+      document.body.addEventListener("touchcancel", mUp, {passive:false});
 
   }
 
